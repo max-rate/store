@@ -1,0 +1,41 @@
+<!-- sales.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Records</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Sales Records</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Product Sales</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="sales-container">
+            <table id="sales-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="sales-body"></tbody>
+            </table>
+        </section>
+        <button id="download-btn">Download Sales Records</button>
+    </main>
+
+    <script src="js/sales.js"></script>
+</body>
+</html>

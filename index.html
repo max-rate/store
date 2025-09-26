@@ -1,0 +1,40 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Sales</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Product Sales</h1>
+        <nav>
+            <ul>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="sales.html">Sales Records</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="products-container"></section>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Check if products data is stored in local storage
+        if (localStorage.getItem("products")) {
+            products = JSON.parse(localStorage.getItem("products"));
+        } else {
+            // Sample product data
+            let products = [
+                { id: 1, name: "Product A", price: 10.99, quantity: 10 },
+                { id: 2, name: "Product B", price: 5.99, quantity: 20 },
+            ];
+            localStorage.setItem("products", JSON.stringify(products));
+        }
+    </script>
+</body>
+</html>
